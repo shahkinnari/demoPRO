@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?> 
+<suite name="BrandShop_TestSuite" verbose="10" parallel="false" thread-count="1">
+<parameter name="selenium.port" value="4444" />
+<parameter name="selenium.host" value="localhost" />
+<parameter name="selenium.browser" value="chrome" />
+<parameter name="selenium.url" value="http://34.208.59.166/kleenex" />
+<listeners>
+<listener class-name="com.Utility.RetryTestListener"/>
+<listener class-name="com.Utility.RetryConterManagerListener"/>
+<listener class-name="com.Utility.CustomReporter"/>
+</listeners>
+<test name="TC_2 : Shopping Cart Second Product ."> 
+<classes>
+<class name="com.BrandShop.Index.BrandShop_Index">
+<methods>
+<include name="FailedTC" />
+</methods>
+</class>
+</classes>
+</test>
+</suite>

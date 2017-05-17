@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="BrandShop_TestSuite" verbose="10" parallel="false" thread-count="1">
+
+	<!-- Put IP of localhost/Grid Hub machine -->
+	<parameter name="selenium.host" value="localhost" />
+
+	<!-- Put Port of localhost RC/Grid Hub machine -->
+	<parameter name="selenium.port" value="4444" />
+
+	<!-- Put target browser name as below: 1) Firefox : firefox 2) chrome : 
+		chrome 3) IExplorer : ie8 / ie9 -->
+	<parameter name="selenium.browser" value="Chrome" />
+	<!--  <parameter name="selenium.url" value="http://aamsdev02.cloudapp.net:8082/ProduceAD" /> -->
+ <parameter name="selenium.url" value="http://34.208.59.166/kleenex/" />
+
+		<listeners>
+		<listener class-name="com.Utility.RetryTestListener" />
+		<listener class-name="com.Utility.RetryConterManagerListener" />
+		<listener class-name="com.Utility.CustomReporter" />
+	</listeners>
+	<!-- <test name="TC_1 :  To Login and Intellidox in Australlian Ap.">
+		<classes> 
+			<class name="com.aust_AP.Claim.Asbacom.Index.Exi_New_AsbacomIndex">  For Existing and New 
+				<methods>
+					<include name="Intellidox" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+	
+	<test name="TC_1 : Shopping Cart.">
+		<classes>
+			<class name="com.BrandShop.Index.BrandShop_Index"> 
+				<methods>
+					<include name="StartUp" />
+					
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+	<test name="TC_2 : Shopping Cart Second Product .">
+		<classes>
+			<class name="com.BrandShop.Index.BrandShop_Index"> 
+				<methods>
+					<include name="FailedTC" />
+				</methods>
+			</class>
+		</classes>
+	</test>
+	
+<!-- 	<test name="TC_3 :  Shipping Form Payment Details.">
+		<classes>
+			<class name="com.BrandShop.Index.BrandShop_Index"> 
+				<methods>
+					<include name="Shipping_Payment_Detail" />
+				</methods>
+			</class>
+		</classes>
+	</test> -->
+
+	
+	
+	
+</suite>
